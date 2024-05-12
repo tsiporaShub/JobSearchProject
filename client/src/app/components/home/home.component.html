@@ -1,0 +1,15 @@
+<header>
+    <a [routerLink]="'/login'"><img src="../../../assets/logo.png" alt=""></a>
+    <p TextDesign textColor="white" textSize="30" textWeight="bold">hello {{getUser().name}}</p>
+    <a TextDesign textColor="white" [routerLink]="'/jobs/'+(getUser().jobSearchField)">{{getField(getUser().jobSearchField)}}</a><br>
+    <div>
+        <button (click)="showCVsSentList()">count CVs: {{getCountOfCVs()}}</button>
+        <div *ngIf="showCVs" id="CVsSentList">
+            <div *ngFor="let cv of getCVsSentList()">
+                {{cv.jobTitle}}
+            </div>
+        </div>
+    </div>
+</header>
+<router-outlet></router-outlet>
+<footer>telephone: 0548506671 | gmail: t8506671&#64;gmail.com </footer>

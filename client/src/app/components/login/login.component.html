@@ -1,0 +1,13 @@
+<form (submit)="contact()" class="form">
+    <h3>enter your details:</h3>
+    <div>
+        <label for="user_name">name:</label>
+        <input type="text" name="user_name" [(ngModel)]="userName">
+    </div>
+    <div>
+        <label for="user_password">password:</label>
+        <input type="text" name="user_password" [(ngModel)]="userPassword">
+        <span TextDesign textColor="red" textSize="10">{{passwordValidation}}</span>
+    </div>
+    <button type="submit">send</button>
+</form>

@@ -1,0 +1,12 @@
+<form ngForm>
+    <div>
+        <select #field name="" id="" (change)="onSelected(field.value)">
+            <option  value="all">all job fields</option>
+            <option  value="{{i}} " *ngFor="let t of getFields() let i=index ">{{t}}</option>
+            </select>
+    </div>
+    <div>
+        <input placeholder="job area " type="string " [(ngModel)]="jobArea " name="area ">
+    </div>
+    <button type="submit " (click)="filter() ">חפש</button>
+</form>
